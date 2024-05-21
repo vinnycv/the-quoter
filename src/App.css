@@ -5,7 +5,61 @@
   text-align: center;
 }
 
-.logo {
+#quote-box {
+  background-color: #fff;
+  border-radius: 5px;
+  width: 450px;
+  display: table;
+  padding: 40px 50px;
+}
+
+#container #quote-box #author {
+  width: 450px;
+  height: auto;
+  text-align: right;
+  font-size: 1em;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+#container #quote-box #text {
+  width: 450px;
+  height: auto;
+  text-align: center;
+  font-size: 1.75em;
+  font-weight: 500;
+  font-family: Arial, sans-serif;
+}
+
+.buttons {
+  width: 450px;
+  display: block;
+  margin: auto;
+}
+
+#container #quote-box .buttons #new-quote {
+  float: right;
+  color: #fff;
+}
+
+#footer {
+  width: 550px;
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: #ffffffbd;
+}
+
+.fa {
+  color: #fff;
+  width: 20px;
+}
+
+#tweet-quote {
+  margin-right: 5px;
+}
+
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -31,12 +85,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
+} */
