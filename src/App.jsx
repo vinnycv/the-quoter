@@ -2,6 +2,8 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useState } from 'react'
 import { quotes, authors, colors } from './data.js'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 function App() {
   const [index, setIndex] = useState(0);
@@ -66,7 +68,7 @@ function Buttons({ color, onClick, quote, author }) {
         href={'"https://twitter.com/intent/tweet?=' + quote + " -" + author}
         style={{ backgroundColor: color }}
       >
-        <i className="fa fa-twitter fa-lg"></i>
+        <i className="bi bi-twitter-x"></i>
       </a>
       <a
         className="btn"
@@ -76,7 +78,7 @@ function Buttons({ color, onClick, quote, author }) {
         href="https://facebook.com"
         style={{ backgroundColor: color }}
       >
-        <i className="fa fa-facebook fa-lg"></i>
+        <i className="bi bi-instagram"></i>
       </a>
     </div>
   );
