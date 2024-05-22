@@ -1,4 +1,4 @@
-// import { Helmet } from "react-helmet"
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useState } from 'react'
 import { quotes, authors, colors } from './data.js'
 import './App.css'
@@ -7,24 +7,26 @@ function App() {
   const [index, setIndex] = useState(0);
 
   return (
-    <div id="container">
-      <div id="quote-box" style={{ color: colors[index] }}>
-        <Quote quote={quotes[index]} />
-        <Author author={authors[index]} />
-        <Buttons
-          color={colors[index]}
-          quote={quotes[index]}
-          author={authors[index]}
-          onClick={() => {
-            setIndex(index === quotes.length - 1 ? 0 : index + 1);
-          }}
-        />
-        {/* <Helmet>
-          {<style>{"body { background-color:" + colors[index] + "; }"}</style>}
-        </Helmet> */}
+    <HelmetProvider>
+      <div id="container">
+        <div id="quote-box" style={{ color: colors[index] }}>
+          <Quote quote={quotes[index]} />
+          <Author author={authors[index]} />
+          <Buttons
+            color={colors[index]}
+            quote={quotes[index]}
+            author={authors[index]}
+            onClick={() => {
+              setIndex(index === quotes.length - 1 ? 0 : index + 1);
+            }}
+          />
+          <Helmet>
+            {<style>{"body { background-color:" + colors[index] + "; }"}</style>}
+          </Helmet>
+        </div>
+        <div id="footer">by vinnyv</div>
       </div>
-      <div id="footer">by vinnyv</div>
-    </div>
+    </HelmetProvider>
   );
 }
 
