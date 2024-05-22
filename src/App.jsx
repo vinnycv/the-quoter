@@ -1,9 +1,10 @@
-import { Helmet } from "https://esm.sh/react-helmet"
+// import { Helmet } from "react-helmet"
 import { useState } from 'react'
 import { quotes, authors, colors } from './data.js'
+import './App.css'
 
 function App() {
-  let [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(0);
 
   return (
     <div id="container">
@@ -18,20 +19,16 @@ function App() {
             setIndex(index === quotes.length - 1 ? 0 : index + 1);
           }}
         />
-        <Helmet>
+        {/* <Helmet>
           {<style>{"body { background-color:" + colors[index] + "; }"}</style>}
-        </Helmet>
+        </Helmet> */}
       </div>
       <div id="footer">by vinnyv</div>
     </div>
   );
 }
 
-interface Props {
-  quote: string;
-}
-
-function Quote({ quote }: Props) {
+function Quote({ quote }) {
   return (
     <div id="text">
       <p>{quote}</p>
@@ -39,11 +36,7 @@ function Quote({ quote }: Props) {
   );
 }
 
-interface Props {
-  author: string;
-}
-
-function Author({ author }: Props) {
+function Author({ author }) {
   return (
     <div id="author">
       <p>{"- " + author}</p>
@@ -51,12 +44,7 @@ function Author({ author }: Props) {
   );
 }
 
-/*interface Props {
-  color: string;
-  onClick: () => void;
-}*/
-
-function Buttons({ color, onClick, quote, author }: Props) {
+function Buttons({ color, onClick, quote, author }) {
   return (
     <div className="buttons">
       <div
@@ -92,7 +80,7 @@ function Buttons({ color, onClick, quote, author }: Props) {
   );
 }
 
-//export default App;
+export default App;
 
 //ReactDOM.render(<App />, document.getElementById("app"));
 
@@ -103,11 +91,6 @@ function Buttons({ color, onClick, quote, author }: Props) {
   document.getElementById("root")
 );*/
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
