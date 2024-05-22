@@ -1,20 +1,47 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  /* background-color: #fff; */
+}
+
+@media (max-width: 830px) {
+  #container {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 831px) and (max-width: 1024px) {
+  #container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  #container {
+    width: 50vw;
+  }
 }
 
 #quote-box {
+  /* border-radius: 5px; */
+  padding: 40px 50px 30px 50px;
+  border-radius: 13px;
   background-color: #fff;
-  border-radius: 5px;
-  width: 450px;
-  display: table;
-  padding: 40px 50px;
 }
 
-#container #quote-box #author {
-  width: 450px;
+#author {
   height: auto;
   text-align: right;
   font-size: 1em;
@@ -22,67 +49,42 @@
   font-style: italic;
 }
 
-#container #quote-box #text {
-  width: 450px;
-  height: auto;
+#quote-text {
+  margin: 0;
   text-align: center;
   font-size: 1.75em;
   font-weight: 500;
   font-family: Arial, sans-serif;
 }
 
+#quote-text>p {
+  margin: 0;
+}
+
 .buttons {
-  width: 450px;
-  display: block;
   margin: auto;
+  color: #fff;
 }
 
-#container #quote-box .buttons #new-quote {
+#new-quote {
   float: right;
-  color: #fff;
-}
-
-#footer {
-  width: 550px;
-  display: block;
-  text-align: center;
-  font-size: 0.8em;
-  color: #ffffffbd;
-}
-
-.fa {
-  color: #fff;
-  width: 20px;
+  color: inherit;
 }
 
 #tweet-quote {
   margin-right: 5px;
+  float: left;
+  color: inherit;
 }
 
-/* .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#insta-quote {
+  float: left;
+  color: inherit;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#footer {
+  text-align: center;
+  font-size: 0.8em;
+  color: #ffffffbd;
+  background-color: inherit;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */

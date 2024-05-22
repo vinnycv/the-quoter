@@ -34,7 +34,7 @@ function App() {
 
 function Quote({ quote }) {
   return (
-    <div id="text">
+    <div id="quote-text">
       <p>{quote}</p>
     </div>
   );
