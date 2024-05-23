@@ -87,6 +87,11 @@
   box-shadow: white 1px 1px 5px 5px;
 }
 
+.button:active {
+  color: var(--custom-white);
+  box-shadow: none;
+}
+
 #new-quote {
   margin-left: auto;
   /* this aligns the new quote button to the right side of the quote box */
@@ -102,4 +107,17 @@
   color: var(--custom-white);
   opacity: .5;
   background-color: inherit;
+}
+
+#footer>a {
+  text-decoration: none;
+  color: var(--custom-white);
+}
+
+#footer>a:hover {
+  color: white;
+}
+
+#footer>a:active {
+  color: var(--custom-white);
 }

@@ -26,7 +26,7 @@ function App() {
             {<style>{"body { background-color:" + colors[index] + "; }"}</style>}
           </Helmet>
         </div>
-        <div id="footer">by vinnyv</div>
+        <div id="footer">by <a href="https://codepen.io/VinnyV" target="_blank">vinnyv</a></div>
       </div>
     </HelmetProvider>
   );
