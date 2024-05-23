@@ -22,12 +22,24 @@ export const authors = [
   "Edward Abbey",
 ];
 
+// export const colors = [
+//   "#fa7b7b",
+//   "#fa9931",
+//   "rgb(63, 61, 46)",
+//   "#3ece28",
+//   "#22d7d4",
+//   "#0f63d9",
+//   "#a771ff",
+//   "#ff71a0",
+//   "#0a6515",
+// ];
+
 export const colors = [
-  "#fa7b7b",
-  "#fa9931",
+  "#e94822",
+  "#36626a",
   "rgb(63, 61, 46)",
   "#3ece28",
-  "#22d7d4",
+  "#4f3b78",
   "#0f63d9",
   "#a771ff",
   "#ff71a0",
