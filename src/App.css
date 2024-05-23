@@ -7,6 +7,19 @@
   font-family: Arial, sans-serif;
 }
 
+.poetsen-one-regular {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -44,6 +57,15 @@
   background-color: var(--custom-white);
 }
 
+#quote-text {
+  text-align: center;
+  font-size: 1.75em;
+}
+
+#quote-text>p {
+  margin: .2em;
+}
+
 #author {
   text-align: right;
   font-size: 1em;
@@ -53,11 +75,6 @@
 
 #author>p {
   margin: 0;
-}
-
-#quote-text {
-  text-align: center;
-  font-size: 1.75em;
 }
 
 .buttons {
@@ -116,6 +133,8 @@
 
 #footer>a:hover {
   color: white;
+  transform: rotate(60deg);
+  text-shadow: 0 0 2px white;
 }
 
 #footer>a:active {

@@ -23,7 +23,13 @@ function App() {
             }}
           />
           <Helmet>
-            {<style>{"body { background-color:" + colors[index] + "; }"}</style>}
+            <>
+              {<style>{"body { background-color:" + colors[index] + "; }"}</style>}
+              {<link rel="preconnect" href="https://fonts.googleapis.com"></link>}
+              {<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>}
+              {<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"></link>}
+              {<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poetsen+One&display=swap" rel="stylesheet"></link>}
+            </>
           </Helmet>
         </div>
         <div id="footer">by <a href="https://codepen.io/VinnyV" target="_blank">vinnyv</a></div>
@@ -35,7 +41,7 @@ function App() {
 function Quote({ quote }) {
   return (
     <div id="quote-text">
-      <p>{quote}</p>
+      <p className="poetsen-one-regular">{quote}</p>
     </div>
   );
 }
@@ -43,7 +49,7 @@ function Quote({ quote }) {
 function Author({ author }) {
   return (
     <div id="author">
-      <p>{"- " + author}</p>
+      <p className="cedarville-cursive-regular">{"- " + author}</p>
     </div>
   );
 }
