@@ -51,17 +51,17 @@ function Author({ author }) {
 function Buttons({ color, onClick, quote, author }) {
   return (
     <div className="buttons">
-      <div
-        className="btn"
+      <button
+        className="button"
         onClick={onClick}
         id="new-quote"
         title="See a new quote!"
         style={{ backgroundColor: color }}
       >
         New Quote
-      </div>
+      </button>
       <a
-        className="btn"
+        className="button"
         id="tweet-quote"
         title="Tweet this quote!"
         target="_blank"
@@ -71,7 +71,7 @@ function Buttons({ color, onClick, quote, author }) {
         <i className="bi bi-twitter-x"></i>
       </a>
       <a
-        className="btn"
+        className="button"
         id="insta-quote"
         title="Post this quote on FB!"
         target="_blank"
